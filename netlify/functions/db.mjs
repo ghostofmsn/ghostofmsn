@@ -9,7 +9,7 @@ const json = (o, s = 200) => new Response(JSON.stringify(o), { status: s, header
 const rid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 
 export default async (req) => {
-  const store = getStore("gomsn");
+  const store = getStore({ name: "gomsn", consistency: "strong" });
   const url = new URL(req.url);
   if (req.method === "GET") {
     const c = url.searchParams.get("c") || "";
