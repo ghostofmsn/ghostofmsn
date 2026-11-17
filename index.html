@@ -2432,6 +2432,89 @@ body.mv45on .t36r,body.mv45on .l30c,body.mv45on .g30c,body.mv45on .c42c,body.mv4
 .mv45drag{cursor:grabbing!important;z-index:20!important;transition:none!important}
 
 </style>
+<style>
+/* Research Desk · Space Age shell, Frutiger Aero glass */
+#researchDesk{position:fixed;inset:76px 18px 72px;z-index:3;display:grid;place-items:center;overflow:auto;color:#f0f3ff;font-family:"Space Grotesk",sans-serif;pointer-events:none}
+#researchDesk>div{pointer-events:auto;width:min(680px,100%);padding:clamp(20px,5vw,46px);border:1px solid #d5e1ff56;border-radius:38px;background:linear-gradient(135deg,#252b4ef5,#171524f5 65%,#33335bf5);box-shadow:0 24px 70px #02020b7d,inset 0 1px #fff7}
+#researchDesk h1{font:400 clamp(35px,8vw,75px)/.95 "Space Grotesk",sans-serif;letter-spacing:-.07em;margin:10px 0 18px}
+#deskRecent{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:8px}
+#deskRecent li{display:grid;grid-template-columns:minmax(75px,23%) 1fr;gap:10px;padding:9px 0;border-top:1px solid #a8bceb42;overflow-wrap:anywhere}
+#deskRecent li span{color:#c6cefb;font-size:.85em}
+body.inroom #researchDesk,body.inquilt #researchDesk,body.zen #researchDesk,body:has(.ov.open,>.win:not(.hidden)) #researchDesk{display:none}
+body.show-pins #researchDesk{place-items:start end;inset:70px 14px auto auto}
+body.show-pins #researchDesk>div{padding:14px 18px;border-radius:22px}
+body.show-pins #researchDesk h1,body.show-pins #researchDesk .blend-kicker,body.show-pins #deskCount,body.show-pins #deskRecent{display:none}
+body:not(.inroom):not(.show-pins) #board,body:not(.inroom):not(.show-pins) #boardbar,body:not(.inroom):not(.show-pins) #icons{display:none!important}
+body:not(.inroom):not(.show-pins) #wallart{background:radial-gradient(ellipse at 80% 15%,#454271 0,transparent 45%),radial-gradient(ellipse at 8% 85%,#204859 0,transparent 45%),#131320!important}
+#roomCloset{display:none}
+body.inroom #roomCloset{display:block;position:absolute;bottom:clamp(124px,20vh,190px);left:clamp(12px,2vw,30px);z-index:5;background:#191526e6;color:#f5ecff;border:1px solid #d9bdfba0;border-radius:999px;padding:8px 13px;font:600 13px "Space Grotesk",sans-serif}
+body.roommove #roomCloset,body.studio #roomCloset,body.zen #roomCloset,body:has(#startcard:not(.mini)) #roomCloset{display:none!important}
+#blendLab{z-index:99545;overflow:auto;color:#eef0ff;background:radial-gradient(ellipse at 100% 0,#303a66,transparent 55%),#171523;font:16px/1.5 "Space Grotesk",sans-serif}
+.blend-wrap{width:min(1080px,100%);margin:auto;padding:clamp(14px,4vw,42px) clamp(14px,4vw,42px) 80px}
+.blend-header,.blend-actions{display:flex;align-items:center;flex-wrap:wrap;gap:9px}
+.blend-header{justify-content:space-between;gap:12px}
+.blend-header h2{font-size:clamp(28px,5vw,53px);font-weight:500;letter-spacing:-.055em;margin:0}
+.blend-actions button,#blendForm button{border:1px solid #c5d3fa74;border-radius:999px;background:#272a48;color:#f0f0ff;padding:9px 14px;font:600 14px "Space Grotesk",sans-serif}
+.blend-actions button:hover:not(:disabled),#blendForm button:hover{background:#3c4371}
+.blend-actions button:disabled{opacity:.45;cursor:default}
+.blend-kicker{margin:0;color:#c4d5ff;font-size:.84rem;font-weight:600}
+.blend-steps{counter-reset:blend;list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:18px 0}
+.blend-steps[hidden]{display:none}
+.blend-steps li{counter-increment:blend;border-radius:999px;padding:7px 12px;color:#d2d7eb;border:1px solid #bdc7ed47;font-size:14px}
+.blend-steps li::before{content:counter(blend) ". ";font-weight:700}
+.blend-steps [aria-current]{background:#ccdbff;color:#252947}
+#blendBody>h3{font-size:23px;margin-bottom:5px}
+#blendBody>p{margin-top:0}
+.blend-selection{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,253px),1fr));gap:10px;margin:18px 0}
+.blend-find{padding:12px;border:1px solid #b8caf069;border-radius:16px;display:flex;align-items:start;gap:10px;background:#292941;cursor:pointer}
+.blend-find:has(:checked){outline:2px solid #bcd0ff;background:#343c61}
+.blend-find:has(:disabled){cursor:default}
+.blend-find img{width:54px;height:58px;object-fit:cover;border-radius:8px}
+.blend-find span{flex:1;min-width:0;display:block;overflow-wrap:anywhere}
+.blend-find small{color:#c5d0fb}
+.blend-find b{display:block}
+.blend-find span span{margin-top:4px;color:#e2e2f2;font-size:.86rem}
+.blend-find input{width:18px;height:18px;accent-color:#baadff}
+.blend-source-notes{padding-left:22px}
+.blend-source-notes p{margin:2px 0 9px}
+#blendForm{display:grid;gap:14px;max-width:680px}
+#blendForm label{display:grid;gap:5px;font-weight:600}
+#blendForm input,#blendForm textarea{background:#f2f0fa;color:#1b1a29;border:1px solid #c5bcde;border-radius:12px;padding:12px;font:inherit;width:100%}
+.blend-spread{margin:20px 0;display:grid;grid-template-columns:1fr 1fr;border-radius:24px;overflow:hidden;background:#e8e9f4;color:#25243b;box-shadow:0 14px 36px #0807115e}
+.blend-visual{position:relative;min-height:290px;isolation:isolate;display:grid;place-content:center;justify-items:center;gap:14px;color:#fff;padding:26px;text-align:center;background:radial-gradient(ellipse at 67% 20%,var(--tone),transparent 63%),var(--ink)}
+.blend-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.blend-sheet{inset:0 0 auto;height:auto;aspect-ratio:3/2;position:relative;grid-area:1/1;margin:auto 0;background:url("blend-examples.webp") var(--album-x) var(--album-y)/300% 300% no-repeat}
+.blend-visual:has(.blend-sheet){display:flex;align-items:center;padding:0}
+.blend-visual:has(.blend-sheet) small,.blend-visual:has(.blend-sheet) span{display:none}
+.blend-visual small,.blend-visual span{z-index:1}
+.blend-visual small{font-size:clamp(16px,2.3vw,28px);font-weight:600;text-shadow:0 2px 16px #161221}
+.blend-visual span{font-size:22px}
+.blend-orbit{position:absolute;inset:18% 16%;border-radius:50%;background:radial-gradient(ellipse at 36% 22%,#ffffffb0,transparent 34%),radial-gradient(ellipse at 68% 80%,var(--ink),var(--tone));box-shadow:inset 0 0 24px #fff6,0 18px 50px #0007;transform:rotate(-23deg)}
+.blend-orbit:after{content:"";position:absolute;inset:25% -9%;border:1px solid #fff8;border-radius:50%;transform:rotate(27deg)}
+.blend-idea{padding:clamp(16px,4vw,36px);min-width:0;overflow-wrap:anywhere}
+.blend-idea .blend-kicker{color:#55578d}
+.blend-idea h2{font-size:clamp(25px,4.5vw,50px);line-height:1;letter-spacing:-.055em;margin:12px 0}
+.blend-idea p{white-space:pre-line}
+.blend-idea a{color:#313b92}
+.blend-tags{padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:5px}
+.blend-tags li{border:1px solid #9799bf;border-radius:999px;font-size:13px;padding:3px 8px}
+.blend-book-nav{justify-content:center}
+#blendStatus{width:100%;margin:0}
+#ghostQuestions{padding:7px 10px;background:#e9e7f6;color:#27243d;flex:none}
+#ghostQuestions:empty{display:none}
+#ghostQuestions>div{display:flex;gap:6px;overflow-x:auto;padding-top:5px}
+#ghostQuestions button{flex:none;max-width:min(220px,70%);white-space:normal;text-align:left;border:1px solid #aaa4c7;border-radius:12px;background:#f9f5fe;padding:5px 8px;color:#292741;font:inherit}
+#strangers .pop30.open{display:flex}
+@media(max-width:650px){.blend-spread{grid-template-columns:1fr}.blend-visual{min-height:220px}#researchDesk{inset:68px 12px 74px}body.show-pins #researchDesk{left:12px}}
+@media print{
+  body.print-blend>*:not(#blendLab){display:none!important}
+  body.print-blend #blendLab{position:static!important;display:block!important;overflow:visible;background:#fff;color:#222}
+  body.print-blend .blend-header,body.print-blend .blend-steps,body.print-blend .blend-actions{display:none!important}
+  body.print-blend .blend-wrap{padding:0;max-width:none}
+  body.print-blend .blend-spread{break-inside:avoid;box-shadow:none;border:1px solid #aaa;print-color-adjust:exact}
+}
+
+</style>
 </head>
 <body>
 <canvas id="stars"></canvas>
@@ -7887,7 +7970,7 @@ const FITNAMES = ["sms ticker princess","2am rooftop","star academy prime","cybe
 /* =================== EXTENSION LOGIC =================== */
 const XS = (() => { try { return JSON.parse(localStorage.getItem("gom_x") || "{}"); } catch(_) { return {}; } })();
 XS.pts = XS.pts || 0; XS.b = XS.b || []; XS.seen = XS.seen || []; XS.fit = XS.fit || null; XS.local = XS.local || {};
-const xsave = () => { try { localStorage.setItem("gom_x", JSON.stringify(XS)); } catch(_) {} };
+const xsave = () => { try { localStorage.setItem("gom_x", JSON.stringify(XS)); } catch(_) {} window.refreshResearchDesk?.(); };
 const mod = (a, n) => ((a % n) + n) % n;
 const okUrl = u => /^https?:\/\/[^\s"'<>]+$/i.test(u || "");
 const ago = ts => { const s = (Date.now() - (ts || 0)) / 1000; return s < 60 ? "just now" : s < 3600 ? `${s / 60 | 0}m ago` : s < 86400 ? `${s / 3600 | 0}h ago` : `${s / 86400 | 0}d ago`; };
@@ -9324,16 +9407,17 @@ const LETTERS = [
  {b: "dear you,\nthere's a radio in the corner of my world that only plays chords that never resolve. i like it that way. endings are overrated.\nwhat's playing in your room right now?", ps: ["balearic chill-out", "1990s"], a: "Ghost FM"},
  {b: "dear you,\ni counted 47 tabs in someone's browser tonight. i closed none of them. some things are load-bearing.\nwhat's the oldest tab you have open?", ps: ["french touch", "1998"], a: "47 tabs"}
 ];
-function openLetter(i){
+function openLetter(i, inline){
   const n = i == null ? (XS.letterI || 0) % LETTERS.length : i, L = LETTERS[n];
   const q = q1(`${L.ps[0]} ${L.ps[1]}`);
-  $("#letterT").textContent = `letter #${n + 1} from the ghost`;
-  $("#letterBody").innerHTML = `<div class="postcard"><div class="stampx">${ghostFit(["classic", "paris", "y2k", "club", "royal", "goth"][n % 6])}</div><div class="pm2">PAR AVION<br>2:13 AM<br>'04</div><div style="white-space:pre-line;padding-right:96px">${esc(L.b)}</div>
+  if (!inline) $("#letterT").textContent = `letter #${n + 1} from the ghost`;
+  const holder = inline || $("#letterBody");
+  holder.innerHTML = `<div class="postcard"><div class="stampx">${ghostFit(["classic", "paris", "y2k", "club", "royal", "goth"][n % 6])}</div><div class="pm2">PAR AVION<br>2:13 AM<br>'04</div><div style="white-space:pre-line;padding-right:96px">${esc(L.b)}</div>
     <div class="ps">ps: listening to ${esc(L.ps[0])} (${esc(L.ps[1])}) on repeat → <a href="https://www.youtube.com/results?search_query=${q}" target="_blank" rel="noopener">▶ youtube</a> · <a href="https://open.spotify.com/search/${q}" target="_blank" rel="noopener">♫ spotify</a></div>
     <div class="ps">attached: ${esc(L.a)}</div><div>xx, the ghost</div>
     <div style="margin-top:12px;font:12px Space Grotesk,Tahoma,sans-serif" class="row">${colBtn({t: `${L.ps[0]} (${L.ps[1]})`, k: "listen", by: "", src: "a letter from the ghost"}, "🎒 pocket the song")}<button class="xp" data-open="chat:ghost">✍ write back</button><button class="xp" id="lnext">next letter ›</button></div></div>`;
-  $("#lnext").onclick = () => openLetter((n + 1) % LETTERS.length);
-  openWin("letter"); XS.q.letter = 1; xsave(); badge("penpal"); questTick();
+  holder.querySelector("#lnext").onclick = () => openLetter((n + 1) % LETTERS.length, inline);
+  if (!inline) openWin("letter"); XS.q.letter = 1; xsave(); badge("penpal"); questTick();
 }
 
 /* ---------- quests + levels: the whole thing is a game ---------- */
@@ -11660,15 +11744,9 @@ XS.board = XS.board || null;
   if (!XS.custom.wall) { XS.custom.wall = "board"; xsave(); document.body.classList.add("w-board"); }
   document.body.insertAdjacentHTML("afterbegin", `<div id="board"></div>`);
   const B = $("#board");
-  const DEF = () => [
-    {id: "david", type: "david", x: .62, y: .16, w: 260, r: -3},
-    {id: "n1", type: "note", x: .2, y: .14, w: 200, r: 2, text: "drag anything. this desktop is yours."},
-    ...OBJPHOTOS.filter((_, i) => [1, 3, 12, 13, 18, 22].includes(i)).map((o, i) => ({id: "p" + i, type: "polaroid", x: [.28, .44, .2, .5, .36, .78][i], y: [.5, .6, .72, .36, .3, .64][i], w: 150, r: [-6, 4, -2, 7, -4, 3][i], src: o.img, cap: o.t})),
-    {id: "g", type: "sticker", x: .86, y: .14, w: 110, r: 8, src: Z12.ghost || ""},
-    {id: "s1", type: "word", x: .55, y: .82, w: 0, r: -4, text: "appear offline"},
-    {id: "s2", type: "word", x: .16, y: .4, w: 0, r: 5, text: "♫ now playing: wahdon"}
-  ];
-  let items = XS.board || DEF();
+  const defaults = new Set(["david","n1","p0","p1","p2","p3","p4","p5","g","s1","s2"]);
+  const DEF = () => [];
+  let items = (XS.board || DEF()).filter(item => !defaults.has(item.id));
   const save = () => { XS.board = items; try { xsave(); } catch(_) { toast("that's a lot of pictures. remove one to keep saving."); } };
   function el(it){
     const d = document.createElement("div"); d.className = "bi " + it.type; d.dataset.id = it.id;
@@ -13045,7 +13123,7 @@ const GFM_ST = [
 
   /* ---------------- the learning journal (everything logs here) ---------------- */
   XS.learn = XS.learn || [];
-  const learn = (k, t, line) => { try { const last = XS.learn[0]; if (last && last.t === t && last.k === k && Date.now() - last.at < 6e4) return; XS.learn.unshift({k, t, line: line || "", at: Date.now()}); XS.learn = XS.learn.slice(0, 600); xsave(); } catch(_) {} };
+  const learn = (k, t, line, url) => { try { const last = XS.learn[0]; if (last && last.t === t && last.k === k && Date.now() - last.at < 6e4) return; XS.learn.unshift({k, t, line: line || "", url, at: Date.now()}); XS.learn = XS.learn.slice(0, 600); xsave(); } catch(_) {} };
   window.learn = learn;
 
   /* ---------------- photos (Wikimedia Commons, credited) ---------------- */
@@ -13292,7 +13370,7 @@ const GFM_ST = [
     ].concat(pieces.length ? [`<div class="c30s more" style="--c:${c}"><small>from the archive</small><div class="c30more">${pieces.map(p => `<button data-l30arch><span><img src="${(typeof SPIMG !== "undefined" && SPIMG[p.k]) || ""}" alt=""></span><b>${esc(p.house || p.t || "")}</b><small>${esc(p.what || p.when || "")}</small></button>`).join("")}</div></div>`] : []);
     cI = 0; drawCar();
     $("#c30act").innerHTML = `<a class="xp big" href="${s[1]}" target="_blank" rel="noopener">enter the site ↗</a><button class="xp" data-l30shuffle>✦ shuffle</button><button class="xp" data-l30spark>✦ spark: go sideways</button>`;
-    $("#car30").classList.add("open"); learn("source", s[0], s[2]);
+    $("#car30").classList.add("open"); learn("source", s[0], s[2], s[1]);
   };
   const drawCar = () => { $("#c30track").innerHTML = cSlides[cI] || ""; $("#c30dots").innerHTML = cSlides.map((_, i) => `<i class="${i === cI ? "on" : ""}" data-c30d="${i}"></i>`).join(""); };
   const shuffleTo = (otherPillar) => { const cur = SH[cSrc]; const pool = otherPillar && cur ? SH.filter(x => x[4] !== cur[4]) : SH; openCar(SH.indexOf(pool[Math.floor(Math.random() * pool.length)])); };
@@ -13618,22 +13696,25 @@ const GFM_ST = [
       <div class="ls37cols">${COLS.map(([c, n], i) => `<button class="ls37c ${i ? "" : "on"}" data-ls37col="${c}" style="--c:${c}" title="${n} envelope"></button>`).join("")}</div>
       <div class="ls37act"><button class="xp big" data-ls37send>seal it and pin it to the wall</button></div><p class="ls37note" id="ls37note">${LIVE ? "it goes on the wall for everyone, anonymously." : "this preview keeps it on your browser. on the live site it goes up for everyone."}</p></div></div>`);
   const O = $("#strangers");
+  const read = $("#ls37read"), composeLetter = $("#ls37new");
+  O.append(read, composeLetter);
   const vis = () => L.filter(l => (l.reports || 0) < 3 && !(XS.hidLet || []).includes(l.id));
   const paint = () => { const ls = vis(); $("#ls37wall").innerHTML = ls.map((l, i) => { const first = String(l.text || "").split(/\s+/).slice(0, 4).join(" "); const s = [.8, 1, 1.25, .9, 1.1][i % 5]; return `<button class="env37" data-ls37="${esc(l.id)}" style="--c:${esc(l.col || "#f4f2ee")};--s:${s};--r:${((i * 37) % 9) - 4}deg"><i class="fl"></i><span class="pp">${esc(first)}…</span><i class="fr"></i><b class="pin l"></b><b class="pin r"></b></button>`; }).join("") || `<p class="ls37intro">the wall is empty. be the first.</p>`; };
   const load = rows => { const seen = new Set(); rows = rows.filter(r => r && !seen.has(r.id) && seen.add(r.id)); L = rows.map(r => ({id: r.id, text: r.text, col: r.col, sign: r.sign, ts: r.ts, reports: r.reports || 0})).concat(SEED.filter(s => !rows.some(r => r.id === s.id))); if ($("#strangers").classList.contains("open")) paint(); };
   let watching = false;
-  const openS = () => { closeOverlays(); if (!watching) { watching = true; watch("strangers", load); } else load(ROWS.strangers || []); if (!L.length) load([]); paint(); O.classList.add("open"); };
+  const openS = () => { closeOverlays(); read.classList.remove("open"); composeLetter.classList.remove("open"); if (!watching) { watching = true; watch("strangers", load); } else load(ROWS.strangers || []); if (!L.length) load([]); paint(); O.classList.add("open"); };
   window.openStrangers = openS;
   const show = id => { const l = L.find(x => x.id === id); if (!l) return; $("#ls37in").innerHTML = `<p class="ls37text">${esc(l.text).replace(/\n/g, "<br>")}</p><p class="ls37sig">— ${esc(l.sign || "a stranger")}${l.ts ? `, ${new Date(l.ts).toLocaleDateString(undefined, {month: "long", year: "numeric"})}` : ""}</p><div class="ls37act"><button class="xp" data-ls37rand>✦ another one</button><button class="xp" data-ls37write>✉ write back to the wall</button>${String(l.id).startsWith("seed") ? "" : `<button class="xp ls37rep" data-ls37rep="${esc(l.id)}">report</button>`}</div>`; $("#ls37read").classList.add("open"); try { window.learn && window.learn("letter", "a letter from a stranger", String(l.text).slice(0, 140)); } catch(_) {} };
   let col = COLS[0][0];
   const BAD = /(https?:\/\/|www\.|@[a-z0-9_]{3,}|\+?\d[\d\s().-]{7,}\d)/i;
   document.addEventListener("click", async e => { const t = e.target;
-    if (t.closest("[data-ls37x]")) { O.classList.remove("open"); return; }
+    if (t.closest("[data-ls37x]")) { read.classList.remove("open"); composeLetter.classList.remove("open"); O.classList.remove("open"); return; }
     if (t.closest("[data-ls37c]") || t.id === "ls37read" || t.id === "ls37new") { $("#ls37read").classList.remove("open"); $("#ls37new").classList.remove("open"); return; }
+    if (t.closest('#ls37read [data-open="chat:ghost"]')) { read.classList.remove("open"); O.classList.remove("open"); }
     const env = t.closest("[data-ls37]"); if (env) { show(env.dataset.ls37); return; }
     if (t.closest("[data-ls37rand]")) { const v = vis(); if (v.length) show(v[Math.floor(Math.random() * v.length)].id); return; }
     if (t.closest("[data-ls37write]")) { $("#ls37read").classList.remove("open"); $("#ls37new").classList.add("open"); $("#ls37t").focus(); return; }
-    if (t.closest("[data-ls37ghost]")) { O.classList.remove("open"); try { openThing("letters0"); } catch(_) {} return; }
+    if (t.closest("[data-ls37ghost]")) { openLetter(undefined, $("#ls37in")); read.classList.add("open"); return; }
     const cb = t.closest("[data-ls37col]"); if (cb) { col = cb.dataset.ls37col; document.querySelectorAll(".ls37c").forEach(b => b.classList.toggle("on", b === cb)); return; }
     const rp = t.closest("[data-ls37rep]"); if (rp) { const id = rp.dataset.ls37rep; (XS.hidLet = XS.hidLet || []).push(id); xsave(); const l = L.find(x => x.id === id); try { if (XDB && !id.startsWith("local-")) await XDB.doc("strangers/" + id).update({reports: ((l && l.reports) || 0) + 1}); } catch(_) {} $("#ls37read").classList.remove("open"); paint(); toast("thanks. it's hidden for you, and flagged."); return; }
     if (t.closest("[data-ls37send]")) { const text = $("#ls37t").value.trim(), sign = $("#ls37s").value.trim(); if (text.length < 3) { $("#ls37note").textContent = "write a little more."; return; } if (BAD.test(text) || BAD.test(sign)) { $("#ls37note").textContent = "no links, handles or phone numbers. keep it anonymous."; return; }
@@ -13684,68 +13765,6 @@ const GFM_ST = [
     const g = t.closest("[data-r37g]"); if (g) { window.openGroup(ROOMS[+g.dataset.r37g][2]); return; }
     const b = t.closest("[data-r37]"); if (!b) return; const k = b.dataset.r37;
     if (k === "ghost") openChat("ghost"); else if (k === "msn") goPlace("msn"); else if (k === "new") window.openGroup(["ghost"]); else if (k === "strangers") openS(); else if (k === "talk") window.openTalk(); });
-})();
-
-
-/* =================== EXTENSION 38: the blender. everything you saved, blended into a report you can act on =================== */
-(function(){
-  const RB = () => window.RABBIT || {};
-  const pickN = (a, n) => a.slice().sort(() => Math.random() - .5).slice(0, n);
-  const uniq = a => [...new Set(a)];
-  function blend(){
-    const L = XS.learn || [], S = (XS.stash || []).map(s => ({k: "pocket", t: s.t || s.title || "", line: s.line || ""}));
-    const all = L.concat(S).filter(x => x.t);
-    const by = k => uniq(all.filter(x => x.k === k).map(x => x.t));
-    const sounds = by("sound").filter(g => RB()[g]), aes = by("aesthetic"), plants = by("plant").map(p => p.replace(/\s*\(.*\)$/, "")), sites = by("source"), pockets = by("pocket"), sparks = by("spark");
-    const n = uniq(all.map(x => x.k + x.t)).length;
-    if (n < 3) return null;
-    const A = sounds[0] || aes[0] || pockets[0] || "", B = aes[0] && aes[0] !== A ? aes[0] : (plants[0] || pockets[1] || sounds[1] || ""), C = plants[0] && plants[0] !== B ? plants[0] : (sites[0] || sounds[2] || "");
-    const niche = [A, B, C].filter(Boolean).join(" × ");
-    const places = uniq(sounds.map(g => RB()[g][0]));
-    const artists = uniq(sounds.flatMap(g => RB()[g][3].slice(0, 3))).slice(0, 12);
-    const next = uniq(sounds.flatMap(g => RB()[g][4])).filter(g => !sounds.includes(g)).slice(0, 6);
-    const days = uniq(L.map(x => new Date(x.at).toDateString())).length;
-    const title = (A ? A.split(/[\s-]/)[0] : "ghost") + " " + (B ? B.split(/\s/).slice(-1)[0] : "club");
-    const R = {n, days, niche, title, sounds, aes, plants, sites, pockets, sparks, places, artists, next,
-      todo: [
-        artists.length ? ["make the playlist", `a 12-track mix called "${title}": ${artists.join(", ")}. one track each, in that order, then reshuffle until it tells a story.`] : null,
-        ["make the moodboard", `put these on one page: ${[].concat(aes.slice(0, 3), plants.slice(0, 3), pockets.slice(0, 3)).join(", ") || niche}. find the one colour they share.`],
-        ["make the zine", `8 pages titled "${title}". one page per thing you saved, one sentence each, the last page is a question you still have.`],
-        ["post it", `open a topic in the cybercafé called "${niche}" and ask who else is into it.`],
-        ["write it down", "leave a letter on the stranger wall about the thing that surprised you most."],
-        ["make a piece", `design one object (a bag, a T-shirt, a poster, a dish) that could only exist in "${niche}".`]
-      ].filter(Boolean)};
-    return R;
-  }
-  function html(R){
-    if (!R) return `<p class="mrp">the blender needs at least three things. spin the wheel, open a plant, enter a rabbit hole, pocket something, then come back.</p>`;
-    const li = a => a.map(x => `<li>${esc(x)}</li>`).join("");
-    return `<div class="bl38"><small>your blend · ${R.n} things · ${R.days} day${R.days === 1 ? "" : "s"}</small><h3>${esc(R.niche || R.title)}</h3><p class="bl38t">working title: <b>${esc(R.title)}</b></p>
-      <div class="bl38g">
-      ${R.sounds.length ? `<div><h4>sounds you went into</h4><ul>${li(R.sounds)}</ul></div>` : ""}
-      ${R.aes.length ? `<div><h4>aesthetics</h4><ul>${li(R.aes)}</ul></div>` : ""}
-      ${R.plants.length ? `<div><h4>weird plants</h4><ul>${li(R.plants)}</ul></div>` : ""}
-      ${R.sites.length ? `<div><h4>places you dug</h4><ul>${li(R.sites)}</ul></div>` : ""}
-      ${R.pockets.length ? `<div><h4>things you pocketed</h4><ul>${li(R.pockets.slice(0, 12))}</ul></div>` : ""}
-      ${R.places.length ? `<div><h4>where your taste comes from</h4><ul>${li(R.places)}</ul></div>` : ""}</div>
-      <h4>what to do with it</h4><ol class="bl38do">${R.todo.map(([h, p]) => `<li><b>${esc(h)}</b>${esc(p)}</li>`).join("")}</ol>
-      ${R.next.length ? `<h4>where to go next</h4><div class="rhnext">${R.next.map(g => `<button class="rhn" data-bl38rh="${esc(g)}">${esc(g)} →</button>`).join("")}</div>` : ""}</div>`;
-  }
-  function md(R){
-    if (!R) return "";
-    const L = (h, a) => a.length ? `## ${h}\n\n${a.map(x => "- " + x).join("\n")}\n\n` : "";
-    return `# ${R.niche || R.title}\n\n_working title: ${R.title} · blended on The Ghost of MSN, ${new Date().toLocaleDateString()} · ${R.n} things over ${R.days} day(s)_\n\n` + L("sounds", R.sounds) + L("aesthetics", R.aes) + L("weird plants", R.plants) + L("places dug", R.sites) + L("pocketed", R.pockets) + L("where the taste comes from", R.places) + `## what to do with it\n\n${R.todo.map(([h, p], i) => `${i + 1}. **${h}**: ${p}`).join("\n")}\n\n` + L("next rabbit holes", R.next);
-  }
-  const J = $("#learn30 .j30act");
-  if (J) J.insertAdjacentHTML("afterbegin", `<button class="xp big bl38btn" data-bl38>🌀 blend it all into a report</button>`);
-  const jw = $("#learn30 .j30wrap"); if (jw) $("#j30stats").insertAdjacentHTML("afterend", `<div id="bl38out"></div>`);
-  let last = null;
-  document.addEventListener("click", e => { const t = e.target;
-    if (t.closest("[data-bl38]")) { last = blend(); $("#bl38out").innerHTML = html(last) + (last ? `<div class="j30act"><button class="xp" data-bl38md>⬇ download the report (.md)</button><button class="xp" data-j30print>🖨 print / save as PDF</button><button class="xp" data-bl38>🌀 blend again</button></div>` : ""); $("#bl38out").scrollIntoView({behavior: "smooth"}); return; }
-    if (t.closest("[data-bl38md]") && last) { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([md(last)], {type: "text/markdown"})); a.download = "my-niche-report.md"; document.body.appendChild(a); a.click(); a.remove(); return; }
-    const r = t.closest("[data-bl38rh]"); if (r) { $("#learn30").classList.remove("open"); window.openRabbit(r.dataset.bl38rh); return; }
-  });
-  try { VERT.forEach(v => v.p.forEach(p => { if (p[0] === "learn30") { p[2] = "my journal + the blender"; p[3] = "everything you learned, blended into a report"; } })); } catch(_) {}
 })();
 
 
@@ -14036,6 +14055,271 @@ const GFM_ST = [
   const end = () => { if (!drag) return; const d = drag; drag = null; d.el.classList.remove("mv45drag"); if (d.x == null) return; (XS.pgPos[cur] = XS.pgPos[cur] || {})[d.k] = [Math.round(d.x), Math.round(d.y)]; d.el.style.zIndex = 3; xsave(); };
   document.addEventListener("pointerup", end, true); document.addEventListener("pointercancel", end, true);
   document.addEventListener("click", e => { if (on && cur && e.target.closest(`#${cur} ${T[cur][0]}`)) { e.stopPropagation(); e.preventDefault(); } }, true);
+})();
+
+/* ---------- Research desk and Book of Blends ---------- */
+(function(){
+  const wiki = title => "https://aesthetics.fandom.com/wiki/" + encodeURIComponent(title.trim().replace(/ /g,"_"));
+  const search = title => "https://archive.org/search?query=" + encodeURIComponent(title);
+  const seeds = [
+    ["Aquarium Mourning","Frutiger Aero","Gothic Lolita","An aquarium-lit compact in a black lace sleeve, with a bevelled screen and a tiny silver clasp.","aquarium blue, black lace, blown acrylic","2004 translucent consumer electronics","#269a9e","#151322"],
+    ["Guestbook Chapel","Webcore","Medieval Fantasy","A guestbook laid out as an illuminated manuscript, with clickable marginal creatures that carry messages between pages.","Xerox parchment, ultramarine, pixel marginalia","illuminated manuscript marginalia","#783847","#dac998"],
+    ["Transit for the Recently Asleep","Dreamcore","Space Age","An empty orbital waiting room where the transit display names places you can only remember in dreams.","milk plastic, sodium glow, curved banquettes","Olivier Mourgue Djinn chair","#a46178","#2d2f5c"],
+    ["Orchard Terminal","Solarpunk","Y2K Futurism","A community seed-library kiosk shaped like a translucent portable CD player, with local seeds filed by their harvest date.","pearlescent lime, translucent shell, seed cards","seed library catalogues","#8aab51","#c2d3b1"],
+    ["Saturday Signal","Kawaii","Brutalism","A concrete listening booth with one swollen cherry-red button that plays a stranger's mixtape.","cast concrete, cherry vinyl, candy-scale controls","brutalist public architecture","#be3b55","#766d79"],
+    ["Velvet Buffer","Vaporwave","Art Deco","A hotel reception sign that renders room numbers in amber LEDs inside a stepped, smoked-mirror case.","smoked mirror, amber LED, plum velvet","Art Deco hotel signage","#b58369","#4e244d"],
+    ["Pocket Fog Index","Gen X Soft Club","Weirdcore","A shoulder bag with translucent sleeves for photographs of rooms whose doors disappear when you turn the cards over.","powder blue, brushed nylon, flash blur","early-2000s fashion lookbooks","#74849f","#2a374e"],
+    ["Emergency Sponge Cake","Corporate Memphis","Decora","A copy-shop stamp set that lets visitors overwrite rigid instruction sheets with tiny plastic sweets and charms.","flat pictograms, citrus pink, piled charms","FRUiTS Harajuku street fashion","#d4558b","#dd9135"],
+    ["The Haunted Repair Counter","Cyberpunk","Dark Academia","A library checkout desk for broken voice recorders, with repair notes written inside each borrower's card.","oxidised brass, blue diode, ruled paper","vintage tape recorder repair manuals","#655a45","#253d58"],
+    ["Pearl Offline","Pearlcore","Glitchcore","A set of silver earrings with pearls arranged as a corrupted loading spinner. One missing bead sells the illusion.","silver solder, iridescence, missing pixels","early web loading animations","#9983aa","#374661"]
+  ].map(([title,a,b,idea,tags,query,tone,ink],index)=>({title,idea,tags:tags.split(", "),sources:[{title:a,kind:"aesthetic",url:wiki(a)},{title:b,kind:"aesthetic",url:wiki(b)}],research:[{title:query,url:search(query)}],tone,ink,art:index===0?"blend-aquarium.webp":"",sheet:index>0?index-1:null}));
+  const safeLink = value => {
+    try { const u = new URL(value); return /^https?:$/.test(u.protocol) ? u.href : ""; } catch (_) { return ""; }
+  };
+  function collection(){
+    const unique = new Map();
+    const add = (raw, kind) => {
+      const title = String(raw.t || raw.title || "").trim().slice(0,120);
+      if (!title) return;
+      const key = title.toLowerCase();
+      const previous = unique.get(key);
+      const line = String(raw.line || raw.note || "").trim().slice(0,320);
+      unique.set(key,{title:previous?.title || title,kind:previous?.kind || kind || "discovery",line:previous?.line || line,url:previous?.url || safeLink(raw.url),img:previous?.img || safeLink(raw.img) || (/^data:image\/(?:jpeg|png|webp|gif);base64,/.test(raw.img || "") ? raw.img : "")});
+    };
+    (XS.learn || []).forEach(item=>add(item,item.k));
+    (XS.stash || []).forEach(item=>add(item,item.k || "pocket"));
+    return [...unique.values()];
+  }
+  const prompt = "What would you make if both references had to show up in one object, space or publication?";
+  const kind = { aesthetic:"Aesthetic", sound:"Sound", plant:"Plant", source:"Rabbit hole", pocket:"Pocketed", listen:"Listening", object:"Object", idea:"Idea", read:"Reading", watch:"Film", spark:"Idea" };
+  const label = key => kind[key] || "Discovery";
+  const formatSources = sources => sources.map(s=>s.title).join(" × ");
+  const poem = (p, allowArt) => `<article class="blend-spread"><div class="blend-visual" style="--tone:${/^#[0-9a-f]{6}$/i.test(p.tone)?p.tone:"#7d8dd9"};--ink:${/^#[0-9a-f]{6}$/i.test(p.ink)?p.ink:"#27233d"}">${`<div aria-hidden="true" class="blend-orbit"></div><small>${esc(p.sources[0].title)}</small><span aria-hidden="true">×</span><small>${esc(p.sources[1].title)}</small>` + (allowArt && p.art ? `<img class="blend-art" src="${p.art}" alt="Black lace and aquarium acrylic prototype" onerror="this.remove()">` : allowArt && p.sheet!=null ? `<div class="blend-art blend-sheet" role="img" aria-label="${esc(p.idea)}" style="--album-x:${p.sheet%3*50}%;--album-y:${Math.floor(p.sheet/3)*50}%"></div>` : "")}</div>
+    <div class="blend-idea"><p class="blend-kicker">${esc(formatSources(p.sources))}</p><h2>${esc(p.title)}</h2><p>${esc(p.idea)}</p><ul class="blend-tags">${p.tags.map(t=>`<li>${esc(t)}</li>`).join("")}</ul><h3>Research further</h3>
+    <ul>${[...p.sources,...p.research].map(s=>`<li><a href="${esc(safeLink(s.url) || search(s.title))}" target="_blank" rel="noopener">${esc(s.title)} ↗</a>${s.line ? `<p>${esc(s.line)}</p>` : ""}</li>`).join("")}</ul></div></article>`;
+
+  document.body.insertAdjacentHTML("beforeend", `<section id="researchDesk" aria-labelledby="researchDeskTitle"><div>
+    <p class="blend-kicker">The Ghost of MSN</p><h1 id="researchDeskTitle">Research Desk</h1><p id="deskCount"></p>
+    <div class="blend-actions"><button data-open-blend="collect">Start a blend</button><button data-open-blend="book">Book of Blends</button><button data-go="room" id="deskRoom">Back to the room</button><button id="deskPins" aria-pressed="false">My pinboard</button></div>
+    <ul id="deskRecent"></ul></div></section>
+    <section class="ov" id="blendLab" aria-labelledby="blendTitle"><div class="blend-wrap">
+    <header class="blend-header"><h2 id="blendTitle" tabindex="-1">Blend Studio</h2><div class="blend-actions"><button data-open-blend="book" id="blendBookShortcut">Book of Blends</button><button type="button" data-blend-close aria-label="Close Blend Studio">×</button></div></header>
+    <ol class="blend-steps" aria-label="Blend steps"><li>Choose references</li><li>Write the hybrid</li><li>Export or publish</li></ol><div id="blendBody"></div></div></section>`);
+  $("#startcard").insertAdjacentHTML("afterend",'<button type="button" id="roomCloset">Dollz Closet</button>');
+  $("#roomCloset").onclick = event => goFromRoom("closet",event);
+  $("#deskRoom").onclick = () => goPlace("room");
+  $("#deskPins").onclick = () => {
+    const active = document.body.classList.toggle("show-pins");
+    $("#deskPins").setAttribute("aria-pressed",String(active));
+    $("#deskPins").textContent = active ? "Hide my pinboard" : "My pinboard";
+  };
+  const refreshDesk = () => {
+    const items = collection();
+    $("#deskCount").textContent = items.length ? `${items.length} ${items.length===1?"reference":"references"} in your collection` : "Save a find or follow a rabbit hole to start collecting.";
+    $("#deskRecent").innerHTML = items.slice(0,5).map(item=>`<li><span>${esc(label(item.kind))}</span>${esc(item.title)}</li>`).join("");
+  };
+  const overlay = $("#blendLab"), body = $("#blendBody");
+  let sources = [], selected = new Set(), page = 0, view = "", looking = [], publicRows = [], watched = false, posting = false;
+  let draft = {title:"",idea:"",tags:""};
+  let savedKey = "";
+  function readDraft(){
+    if (view !== "write") return;
+    draft = {title:$("#blendName").value.trim(),idea:$("#blendIdea").value.trim(),tags:$("#blendTags").value.trim()};
+  }
+  function report(){
+    const tags = [...new Set(draft.tags.split(",").map(t=>t.trim().slice(0,36)).filter(Boolean))].slice(0,8);
+    return {title:draft.title,idea:draft.idea,tags,sources:looking.map(({title,kind,line,url})=>({title,kind,line,url:url || (kind==="aesthetic" ? wiki(title) : search(title))})),research:[{title:`Search both references in the Internet Archive`,url:search(looking.map(s=>'"'+s.title+'"').join(" "))}]};
+  }
+  function validPage(p){
+    return p && typeof p.title==="string" && typeof p.idea==="string" && Array.isArray(p.tags) && p.tags.every(t=>typeof t==="string") && Array.isArray(p.sources) && p.sources.length===2 && p.sources.every(s=>s && typeof s.title==="string") && Array.isArray(p.research) && p.research.every(s=>s && typeof s.title==="string");
+  }
+  function render(next){
+    readDraft();
+    view = next;
+    const step = ["collect","write","report"].indexOf(next);
+    $("#blendTitle").textContent = next==="book"?"Book of Blends":"Blend Studio";
+    $("#blendBookShortcut").hidden = next==="book";
+    overlay.querySelector(".blend-steps").hidden = step===-1;
+    overlay.querySelectorAll(".blend-steps li").forEach((li,i)=>{ if (i===step) li.setAttribute("aria-current","step"); else li.removeAttribute("aria-current"); });
+    if (next==="collect"){
+      body.innerHTML = `<h3>Pick two things you found</h3><p>Read your discoveries and pocketed items. Choose two to combine.</p><div class="blend-selection" id="blendSelection">${sources.length ? sources.map((s,i)=>`<label class="blend-find">${s.img ? `<img src="${esc(s.img)}" alt="" loading="lazy" onerror="this.remove()">` : ""}<span><small>${esc(label(s.kind))}</small><b>${esc(s.title)}</b>${s.line ? `<span>${esc(s.line)}</span>` : ""}</span><input type="checkbox" value="${i}" ${selected.has(i)?"checked":""}></label>`).join("") : `<p>You have no saved discoveries yet.</p><div class="blend-actions"><button id="blendExplore">Explore Rabbit Holes</button><button data-open-blend="book">See example blends</button></div>`}</div><footer class="blend-actions"><span id="blendChosen" aria-live="polite"></span><button data-blend-step="write" id="blendContinue">Write the hybrid →</button></footer>`;
+      selectionState();
+    } else if (next==="write"){
+      body.innerHTML = `<h3>${esc(formatSources(looking))}</h3><p>${esc(prompt)}</p><ul class="blend-source-notes">${looking.map(s=>`<li><b>${esc(s.title)}</b>${s.line ? `<p>${esc(s.line)}</p>` : ""}</li>`).join("")}</ul><form id="blendForm"><label>Give the hybrid a name<input id="blendName" required maxlength="100" value="${esc(draft.title)}" placeholder="e.g. Aquarium Mourning"></label><label>Describe the idea<textarea id="blendIdea" required maxlength="700" rows="4" placeholder="What does it look like? What does it do?">${esc(draft.idea)}</textarea></label><label>Keywords<input id="blendTags" maxlength="190" value="${esc(draft.tags)}" placeholder="Materials, colours, moods (comma separated)"></label><div class="blend-actions"><button type="button" data-blend-step="collect">← References</button><button type="button" id="blendSuggest">Suggest a starting point</button><button type="submit">Preview the spread →</button></div></form>`;
+    } else if (next==="report"){
+      body.innerHTML = `${poem(report(),false)}<footer class="blend-actions"><button data-blend-step="write">← Edit</button><button id="blendPrint">Save as PDF</button><button id="blendWord">Download Word</button><button id="blendPublish">${savedKey===JSON.stringify(report())?"Added to the book":"Publish to the Book of Blends"}</button><p id="blendStatus" role="status">Publishing shares your idea, keywords and reference titles with other readers.</p></footer>`;
+      $("#blendPublish").disabled = posting || savedKey===JSON.stringify(report());
+    } else {
+      const pages = seeds.concat(publicRows.filter(p=>validPage(p.blend)).map(p=>p.blend));
+      page = Math.max(0,Math.min(page,pages.length-1));
+      body.innerHTML = `${poem(pages[page],page<seeds.length)}<footer class="blend-actions blend-book-nav"><button data-book-dir="-1" ${page===0?"disabled":""}>← Previous</button><span aria-live="polite">Page ${page+1} / ${pages.length}</span><button data-book-dir="1" ${page===pages.length-1?"disabled":""}>Next →</button><button data-open-blend="collect">Make your own blend</button></footer>`;
+    }
+  }
+  function selectionState(){
+    $("#blendChosen").textContent = `${selected.size} of 2 selected`;
+    $("#blendContinue").disabled = selected.size!==2;
+    body.querySelectorAll(".blend-find input").forEach(input=>{input.disabled = selected.size===2 && !input.checked;});
+  }
+  function open(next){
+    readDraft();
+    closeOverlays();
+    if (next==="collect"){
+      sources = collection();
+      selected = new Set(looking.map(item=>sources.findIndex(s=>s.title===item.title)).filter(i=>i>=0));
+    }
+    render(next);
+    overlay.classList.add("open");
+    $("#blendTitle").focus();
+    if (next==="book" && !watched){
+      watched = true;
+      watch("blends",rows=>{publicRows = rows; if(view==="book" && overlay.classList.contains("open")) render("book");});
+    }
+  }
+  document.addEventListener("click",e=>{
+    const entry = e.target.closest("[data-open-blend]");
+    if (entry) open(entry.dataset.openBlend);
+  });
+  overlay.addEventListener("change",e=>{
+    if (!e.target.matches(".blend-find input")) return;
+    const index = Number(e.target.value);
+    if (e.target.checked) selected.add(index); else selected.delete(index);
+    selectionState();
+  });
+  overlay.addEventListener("submit",e=>{
+    if (e.target.id!=="blendForm") return;
+    e.preventDefault();
+    readDraft();
+    if (!draft.title || !draft.idea) { $("#blendName").focus(); return; }
+    render("report");
+  });
+  overlay.addEventListener("click",async e=>{
+    const b = e.target.closest("button");
+    if (!b) return;
+    if (b.matches("[data-blend-close]")) { readDraft(); overlay.classList.remove("open"); return; }
+    if (b.id==="blendExplore") { overlay.classList.remove("open"); window.openLinks(); return; }
+    if (b.dataset.blendStep){
+      if (view==="collect" && b.dataset.blendStep==="write"){
+        const next = [...selected].map(i=>sources[i]);
+        if (next.length!==2) return;
+        if (JSON.stringify(next.map(s=>s.title))!==JSON.stringify(looking.map(s=>s.title))) draft = {title:"",idea:"",tags:""};
+        looking = next;
+      }
+      render(b.dataset.blendStep);
+      overlay.scrollTop = 0;
+      return;
+    }
+    if (b.id==="blendSuggest"){
+      const [a,b] = looking;
+      const names = looking.map(s=>s.title.toLowerCase());
+      const example = seeds.find(p=>p.sources.every(s=>names.includes(s.title.toLowerCase())));
+      const forms = {sound:"a listening booth",listen:"a listening booth",plant:"a growing cabinet",source:"a pocket field guide",read:"an illustrated zine",watch:"a short title sequence",object:"a handheld prototype",aesthetic:"a room for one visitor"};
+      const format = forms[a.kind] || forms[b.kind] || "a small publication";
+      const name = $("#blendName"), idea = $("#blendIdea"), tags = $("#blendTags");
+      if (!name.value.trim()) name.value = example?.title || (a.title.split(/\s+/).slice(0,2).join(" ") + " / " + b.title.split(/\s+/).slice(-2).join(" ")).slice(0,100);
+      if (!idea.value.trim()) idea.value = example?.idea || `Design ${format} that takes its form from ${a.title} and its atmosphere from ${b.title}. Use one recognisable detail from each reference, then change their scale or material so they belong to the same piece.`;
+      if (!tags.value.trim()) tags.value = example?.tags.join(", ") || [a.title,b.title,format.replace(/^a[n]? /,"")].map(t=>t.slice(0,36)).join(", ");
+      idea.focus();
+      return;
+    }
+    if (b.dataset.bookDir){ page += Number(b.dataset.bookDir); render("book"); return; }
+    if (b.id==="blendPrint"){
+      document.body.classList.add("print-blend");
+      try { window.print(); } finally { document.body.classList.remove("print-blend"); }
+    }
+    if (b.id==="blendWord") word(report());
+    if (b.id==="blendPublish" && !posting){
+      const current = report(), key = JSON.stringify(current);
+      if (key===savedKey) return;
+      posting = true;
+      b.disabled = true;
+      $("#blendStatus").textContent = "Adding your blend…";
+      try {
+        const shared = {...current,sources:current.sources.map(({title,kind})=>({title,kind,url:kind==="aesthetic" ? wiki(title) : search(title)}))};
+        const id = await xadd("blends",{blend:shared});
+        savedKey = key;
+        const status = $("#blendStatus");
+        if (status) status.textContent = id.startsWith("local-") ? "Saved in this browser. Sharing is unavailable here." : "Published. Other visitors can now read it.";
+        b.textContent = "Added to the book";
+      } catch (_) { if ($("#blendStatus")) $("#blendStatus").textContent = "Could not add your blend. Try again."; }
+      finally { posting = false; b.disabled = savedKey===key; }
+    }
+  });
+
+  // A Word document is an OPC ZIP containing relationships and document XML.
+  function word(p){
+    const encode = s=>new TextEncoder().encode(s);
+    const x = s=>String(s).replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g,"").replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]));
+    const paragraph = (s,heading=false)=>`<w:p><w:r>${heading?'<w:rPr><w:b/><w:sz w:val="34"/></w:rPr>':""}<w:t xml:space="preserve">${x(s)}</w:t></w:r></w:p>`;
+    const lines = [paragraph(p.title,true),paragraph(formatSources(p.sources)),...p.idea.split(/\r?\n/).map(line=>paragraph(line)),paragraph("Keywords",true),paragraph(p.tags.join(", ")),paragraph("Research further",true),...[...p.sources,...p.research].flatMap(s=>[paragraph(s.title),...(s.line?[paragraph(s.line)]:[]),paragraph(s.url)])];
+    const entries = {
+      "[Content_Types].xml":'<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>',
+      "_rels/.rels":'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>',
+      "word/document.xml":`<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>${lines.join("")}</w:body></w:document>`
+    };
+    const files = [], central = [];
+    let offset = 0, directorySize = 0;
+    const header = (size,magic)=>{ const bytes = new Uint8Array(size); const dv = new DataView(bytes.buffer); dv.setUint32(0,magic,true); return {bytes,u16:(i,v)=>dv.setUint16(i,v,true),u32:(i,v)=>dv.setUint32(i,v,true)}; };
+    for (const [path,xml] of Object.entries(entries)){
+      const name = encode(path), data = encode(xml);
+      let crc = -1;
+      for (const byte of data){ crc ^= byte; for(let bit=0;bit<8;bit++) crc = (crc>>>1) ^ ((crc&1)?0xedb88320:0); }
+      crc ^= -1;
+      const local = header(30,0x04034b50);
+      local.u16(4,20); local.u32(14,crc); local.u32(18,data.length); local.u32(22,data.length); local.u16(26,name.length);
+      const dir = header(46,0x02014b50);
+      dir.u16(4,20); dir.u16(6,20); dir.u32(16,crc); dir.u32(20,data.length); dir.u32(24,data.length); dir.u16(28,name.length); dir.u32(42,offset);
+      files.push(local.bytes,name,data); central.push(dir.bytes,name);
+      offset += 30+name.length+data.length; directorySize += 46+name.length;
+    }
+    const end = header(22,0x06054b50), count = Object.keys(entries).length;
+    end.u16(8,count); end.u16(10,count); end.u32(12,directorySize); end.u32(16,offset);
+    const url = URL.createObjectURL(new Blob([...files,...central,end.bytes],{type:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}));
+    const a = document.createElement("a");
+    a.href = url; a.download = "ghostofmsn-blend.docx"; a.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  const board = $("#boardbar");
+  board.querySelector('[data-bb="sticker"]').remove();
+  board.querySelector('[data-bb="arch"]').remove();
+  board.insertAdjacentHTML("beforeend",'<button data-open-blend="collect">My collected references</button>');
+  $("#learn30 .j30act").insertAdjacentHTML("afterbegin",'<button class="xp big" data-open-blend="collect">Start a blend</button><button class="xp" data-open-blend="book">Book of Blends</button>');
+  $("#hudDrawer").insertAdjacentHTML("afterbegin",'<button data-open-blend="collect">Blend Studio</button><button data-open-blend="book">Book of Blends</button>');
+  refreshDesk();
+  let refreshPending = false;
+  window.refreshResearchDesk = () => {
+    if (refreshPending) return;
+    refreshPending = true;
+    requestAnimationFrame(() => { refreshPending = false; refreshDesk(); });
+  };
+})();
+
+/* ---------- Ask each ghost about their work ---------- */
+(function(){
+  const suggestions = document.createElement("div");
+  suggestions.id = "ghostQuestions";
+  $("#chat .compose").before(suggestions);
+  const topics = {
+    ghost:["What is the strangest object in your archive?","What internet ritual do you miss?","What should I explore first?"],
+    aero:["What made old interfaces feel alive?","Which Frutiger Aero artefacts should I look for?"],
+    tama:["How did virtual pets change the way we played?","Which pocket games are worth finding?"],
+    dialup:["What did getting online sound like?","Which early web communities do you remember?"]
+  };
+  const before = openChat;
+  openChat = function(id){
+    const result = before.apply(this,arguments);
+    const person = ALL[id];
+    if (!person) return result;
+    const starts = topics[id] || [];
+    const works = (person.works || []).slice(0,2).map(w=>Array.isArray(w)?w[0]:w).filter(w=>typeof w==="string");
+    const theme = typeof person.topic==="string" ? person.topic.split(",")[0].trim() : "";
+    const prompts = [...new Set([...starts,...works.map(w=>`Where should I start with ${w}?`),theme?`What should I know about ${theme}?`:"",!starts.length && !works.length && !theme && person.pm?`What's the story behind “${person.pm}”?`:"","What should I look up after this chat?"].filter(Boolean))].slice(0,3);
+    suggestions.innerHTML = `<b>Ask ${esc(person.n)}</b><div>${prompts.map(q=>`<button type="button">${esc(q)}</button>`).join("")}</div>`;
+    return result;
+  };
+  suggestions.addEventListener("click",e=>{
+    const b = e.target.closest("button"); if(!b) return;
+    const input = $("#inp"); input.value = b.textContent; input.focus();
+  });
 })();
 
 </script>
