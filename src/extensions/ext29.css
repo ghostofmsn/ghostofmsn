@@ -1,0 +1,14 @@
+/* calmer bar */
+body.tidy #hudBubble,body.tidy #hudMake,body.tidy #hudOnline,body.tidy #hudZen,body.tidy #hudPts2,body.tidy .vb{display:none!important}
+#hudRadio{border:0;border-radius:999px;background:#1e1e24;color:#f4ede0;width:40px;height:34px;cursor:pointer;font-size:16px}
+#hudRadio:hover{background:var(--acc,#b6ff3b)}
+#hudDrawer .drh{font:600 10px "Space Mono",monospace;letter-spacing:.2em;text-transform:uppercase;opacity:.5;padding:8px 12px 2px}
+/* quiet labels: small dots, the name on hover */
+body.notags .r3tag{display:block!important;font-size:0!important;width:14px;height:14px;padding:0!important;border-radius:50%!important;background:#fffc!important;box-shadow:0 0 0 3px #0003,0 0 12px #fff8!important;transition:all .2s;overflow:hidden;white-space:nowrap}
+body.notags .r3tag:hover{font-size:14px!important;width:auto;height:auto;padding:6px 12px!important;border-radius:999px!important;background:#fff!important}
+body.notags .r3tag::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid #fff8;animation:tagping 2.6s ease-out infinite}
+@keyframes tagping{from{transform:scale(.6);opacity:1}to{transform:scale(1.8);opacity:0}}
+/* no more stray typing bubbles over the room */
+#speech{display:none!important}
+/* toasts sit lower and smaller */
+#toasts{gap:0!important}

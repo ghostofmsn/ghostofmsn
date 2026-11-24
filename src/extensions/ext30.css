@@ -1,0 +1,174 @@
+/* ===== EXTENSION 30 ===== */
+/* scanned coloured cut-outs: a b/w photo printed onto colour, like a riso scan on board */
+.cut{position:relative;display:block;background:var(--c);border-radius:46% 46% 14px 14px / 30% 30% 14px 14px;overflow:hidden;box-shadow:0 0 0 5px #fbf8f1,7px 9px 0 4px #0000002e,0 18px 30px #0004}
+.cut img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.35) brightness(1.06);mix-blend-mode:multiply}
+.cut.noimg{background:repeating-linear-gradient(45deg,var(--c) 0 10px,#0000 10px 20px),var(--c)}
+.cut.noimg img{display:none}
+
+/* the music room, as a collage on a zebra crossing */
+.mrstage.collage30{background:#8d9094}
+.mrstage.collage30>*:not(.mr30){display:none!important}
+.mr30{position:absolute;inset:0;overflow:hidden;background-color:#86898d;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .52 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
+.mr30::before{content:"";position:absolute;left:-20%;right:-20%;top:38%;height:46%;transform:rotate(-14deg);background:repeating-linear-gradient(90deg,#0000 0 70px,#f1efe9e6 70px 150px);mix-blend-mode:screen;opacity:.85;filter:blur(.3px)}
+.mr30::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#0000 50%,#0005);pointer-events:none}
+.mr30title{position:absolute;left:4%;top:4%;z-index:6;pointer-events:none;line-height:.82}
+.mr30title span{display:block;font:400 clamp(18px,2.4vw,30px) "Bagel Fat One","Anton",sans-serif;color:#f6efd9;text-shadow:3px 3px 0 #1a1a1a}
+.mr30title b{display:block;font:400 clamp(44px,7vw,108px) "Bagel Fat One","Anton",sans-serif;color:transparent;-webkit-text-stroke:2.5px #e3242b;letter-spacing:-.01em}
+.mr30squig{display:block;width:min(560px,46vw);height:46px;margin-top:4px}
+.mro30{position:absolute;z-index:3;border:0;background:none;padding:0;cursor:pointer;transform:rotate(var(--r));transition:transform .25s cubic-bezier(.2,.9,.3,1.3),filter .25s}
+.mro30 .cut{width:100%;height:100%}
+.mro30:hover,.mro30.act{transform:rotate(0) translateY(-10px) scale(1.04);z-index:5;filter:drop-shadow(0 0 0 #fff)}
+.mro30:hover .cut,.mro30.act .cut{box-shadow:0 0 0 5px #fbf8f1,0 0 0 9px #e3242b,9px 14px 0 4px #0000002e,0 24px 40px #0005}
+.mro30 em{position:absolute;left:50%;bottom:-14px;transform:translate(-50%,100%);font:400 clamp(15px,1.6vw,22px)/1 "Bagel Fat One","Anton",sans-serif;color:#f6efd9;text-shadow:2px 2px 0 #1a1a1a,-1px -1px 0 #1a1a1a;white-space:nowrap;font-style:normal;text-align:center}
+.mro30 em small{display:block;font:600 11px "Space Grotesk";text-shadow:none;color:#1a1a1a;background:#f6e43c;padding:3px 8px;border-radius:999px;margin-top:5px;display:inline-block}
+.o-dig{left:5%;top:30%;width:22%;aspect-ratio:1.2}
+.o-stereo{left:36%;top:22%;width:20%;aspect-ratio:.95}
+.o-tt{left:63%;top:16%;width:17%;aspect-ratio:1}
+.o-djm{left:81%;top:26%;width:11%;aspect-ratio:.8}
+.o-cd{left:31%;top:63%;width:13%;aspect-ratio:1}
+.o-cd .cut{border-radius:50%}
+.o-nokia{left:52%;top:58%;width:8%;aspect-ratio:.55}
+.o-walk{left:68%;top:57%;width:13%;aspect-ratio:1}
+.o-808{left:84%;top:58%;width:13%;aspect-ratio:1.5}
+.o-k7{left:3%;top:74%;width:11%;aspect-ratio:1.5}
+.o-boom{left:14%;top:8%;width:12%;aspect-ratio:1.4}
+.o-head{left:44%;top:84%;width:8%;aspect-ratio:1}
+.o-phone{left:89%;top:6%;width:8%;aspect-ratio:1}
+.o-reel{left:61%;top:82%;width:9%;aspect-ratio:1}
+.o-disc{left:18%;top:62%;width:9%;aspect-ratio:1}
+.mr30star{position:absolute;z-index:4;width:clamp(30px,4vw,56px);pointer-events:none;animation:st30 6s ease-in-out infinite;animation-delay:var(--d)}
+.mr30star svg{display:block;width:100%}
+@keyframes st30{50%{transform:rotate(14deg) scale(1.12)}}
+.mr30doodle{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;opacity:.75}
+.mr30cred{position:absolute;left:12px;bottom:8px;right:12px;font:10px "Space Mono",monospace;color:#f6efd9bb;z-index:6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mr30note{position:absolute;right:16px;top:16px;z-index:7;max-width:280px;font:600 12px "Space Grotesk";background:#f6e43c;color:#1a1a1a;padding:8px 12px;border-radius:12px;box-shadow:3px 3px 0 #1a1a1a}
+.mrsc.pon .mr30title b{font-size:clamp(34px,4.6vw,70px)}
+@media (max-width:760px){.o-dig{left:4%;top:24%;width:40%}.o-stereo{left:52%;top:20%;width:40%}.o-tt{left:6%;top:50%;width:30%}.o-djm{left:40%;top:52%;width:18%}.o-cd{left:66%;top:52%;width:26%}.o-nokia{left:8%;top:76%;width:14%}.o-walk{left:30%;top:78%;width:24%}.o-808{left:62%;top:78%;width:30%}.o-k7,.o-boom,.o-head,.o-phone,.o-reel,.o-disc{display:none}.mro30 em{font-size:14px}}
+
+/* rabbit holes */
+.rh small{font:600 11px "Space Mono",monospace;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+.rh h3{font:400 clamp(28px,3vw,40px)/1 "Bagel Fat One","Anton",sans-serif;margin:4px 0 6px}
+.rh .rhw{font:italic 15px "Instrument Serif",serif;opacity:.8;margin:0 0 8px}
+.rh p{line-height:1.5}
+.rhear,.rhtry{background:#f6e43c22;border-left:3px solid #f6e43c;padding:8px 10px;border-radius:0 10px 10px 0}
+.rhtry{border-color:#e3242b;background:#e3242b14}
+.rhear b,.rhtry b{display:block;font:700 11px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
+.rh h4{margin:16px 0 6px;font:700 13px "Space Grotesk"}
+.rhart{display:grid;gap:6px}
+.rha{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:7px 10px;border:1.5px solid currentColor;border-radius:12px}
+.rha b{flex:1;min-width:120px}
+.rha a{font:600 11px "Space Grotesk";text-decoration:none;padding:3px 8px;border-radius:999px;background:#ffffff1a;color:inherit;border:1px solid currentColor}
+.rha a:first-of-type{background:#e3242b;color:#fff;border-color:#e3242b}
+.rhlinks{display:flex;flex-wrap:wrap;gap:6px}
+.rhlinks .xp{text-decoration:none}
+.rhnext,.rhall{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rhn{border:2px solid currentColor;background:none;color:inherit;border-radius:999px;padding:6px 12px;font:600 13px "Space Grotesk";cursor:pointer}
+.rhn:hover{background:#f6e43c;color:#1a1a1a;border-color:#1a1a1a}
+.rhn.sh{border-style:dashed}
+.rhsaved{font:11px "Space Mono",monospace;opacity:.55;margin-top:14px}
+.rhgo{display:block;width:100%;margin-top:8px;border:0;border-radius:12px;padding:12px;background:#e3242b;color:#fff;font:400 18px "Bagel Fat One","Anton",sans-serif;cursor:pointer;box-shadow:3px 3px 0 #1a1a1a}
+.rhgo:hover{transform:translateY(-2px)}
+
+/* the back button */
+#back30{position:fixed;left:14px;bottom:14px;z-index:2147483000;display:none;border:2px solid #1a1a1a;background:#f6e43c;color:#1a1a1a;font:700 14px "Space Grotesk";padding:9px 16px;border-radius:999px;box-shadow:3px 3px 0 #1a1a1a;cursor:pointer}
+#back30.on{display:block}
+#back30:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 #1a1a1a}
+body.prelogin #back30{display:none}
+
+/* rabbit-hole rooms (links) + garden + journal: shared shell */
+#links30,#garden30,#learn30{z-index:99500;background:#86898d;overflow:auto}
+#learn30{background:#f4efe3}
+.l30wrap,.g30wrap,.j30wrap{max-width:1240px;margin:0 auto;padding:28px 22px 80px;color:#1a1a1a}
+.l30head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.l30head small{font:700 11px "Space Mono",monospace;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.l30head h2{margin:4px 0 0;font:400 clamp(30px,4.6vw,64px)/.95 "Bagel Fat One","Anton",sans-serif;color:#f6efd9;-webkit-text-stroke:2px #1a1a1a;paint-order:stroke fill;text-shadow:4px 4px 0 #1a1a1a}
+#learn30 .l30head h2{color:#e3242b}
+.l30bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:18px 0}
+.l30pills{display:flex;flex-wrap:wrap;gap:6px}
+.pl30{border:2px solid #1a1a1a;background:#fbf8f1;border-radius:999px;padding:6px 12px;font:600 13px "Space Grotesk";cursor:pointer}
+.pl30.on,.pl30:hover{background:var(--c)}
+.l30sh{background:#f6e43c!important;border:2px solid #1a1a1a!important;box-shadow:3px 3px 0 #1a1a1a;font-weight:700}
+.l30grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:26px 22px}
+.l30c{border:0;background:none;padding:0;text-align:left;cursor:pointer;color:#1a1a1a;transition:transform .2s}
+.l30c:nth-child(3n){transform:rotate(1.5deg)}.l30c:nth-child(3n+1){transform:rotate(-1.2deg)}
+.l30c:hover{transform:translateY(-6px) rotate(0)}
+.l30img{position:relative;display:block;aspect-ratio:1/1.05;background:var(--c);border-radius:46% 46% 14px 14px / 30% 30% 14px 14px;overflow:hidden;box-shadow:0 0 0 5px #fbf8f1,7px 9px 0 3px #0000002e}
+.l30img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(1) contrast(1.25);mix-blend-mode:multiply;z-index:1}
+.l30img i{position:absolute;inset:0;display:flex;align-items:flex-end;padding:14px;font:400 26px/1 "Bagel Fat One","Anton",sans-serif;font-style:normal;color:#1a1a1a;word-break:break-word}
+.l30c b{display:block;margin-top:12px;font:700 15px "Space Grotesk"}
+.l30c small{font:11px "Space Mono",monospace;opacity:.75}
+
+/* carousel + plant popups */
+.pop30{position:fixed;inset:0;z-index:99700;display:none;align-items:center;justify-content:center;background:#0d0d10cc;padding:20px}
+.pop30.open{display:flex}
+.c30box,.p30box{position:relative;width:min(980px,96vw);max-height:92vh;overflow:auto;background:#fbf8f1;color:#1a1a1a;border-radius:22px;border:3px solid #1a1a1a;box-shadow:8px 8px 0 #1a1a1a;padding:22px}
+.c30box .bx,.p30box .bx{position:absolute;right:12px;top:10px;z-index:3}
+.c30s{min-height:380px;border-radius:16px;background:var(--c);position:relative;overflow:hidden;padding:24px}
+.c30s.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply}
+.c30cap{position:absolute;left:18px;bottom:18px;right:18px;background:#fbf8f1;border:2px solid #1a1a1a;border-radius:14px;padding:12px 14px;box-shadow:4px 4px 0 #1a1a1a}
+.c30s small{font:700 11px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+.c30s h3{font:400 clamp(26px,3.4vw,44px)/1 "Bagel Fat One","Anton",sans-serif;margin:6px 0}
+.c30s.txt h3{font-size:clamp(22px,2.8vw,34px)}
+.c30more{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:12px}
+.c30more button{border:2px solid #1a1a1a;background:#fbf8f1;border-radius:14px;padding:8px;text-align:left;cursor:pointer;color:#1a1a1a}
+.c30more span{display:block;aspect-ratio:1.4;border-radius:10px;overflow:hidden;background:#ddd}
+.c30more img{width:100%;height:100%;object-fit:cover;object-position:top}
+.c30more b{display:block;margin-top:6px}
+.c30nav{display:flex;align-items:center;justify-content:center;gap:12px;margin:12px 0}
+.c30nav button{border:2px solid #1a1a1a;background:#f6e43c;border-radius:50%;width:38px;height:38px;cursor:pointer;font-weight:700}
+#c30dots i{display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid #1a1a1a;margin:0 3px;cursor:pointer}
+#c30dots i.on{background:#e3242b}
+.c30act{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.c30act a{text-decoration:none}
+
+/* the weird garden */
+#garden30{background:#2c3b2a;background-image:radial-gradient(#fff1 1px,#0000 1px);background-size:14px 14px}
+#garden30 .l30head small,#garden30 .g30intro{color:#f4efe3}
+.g30intro{max-width:780px;font:16px/1.55 "Space Grotesk"}
+.g30intro b{background:#f6e43c;color:#1a1a1a;padding:0 4px}
+.g30grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:30px 22px}
+.g30c{border:0;background:none;padding:0;cursor:pointer;color:#f4efe3;text-align:left;transform:rotate(var(--r));transition:transform .2s}
+.g30c:hover{transform:rotate(0) translateY(-6px)}
+.g30c .cut{aspect-ratio:.82}
+.g30c b{display:block;margin-top:12px;font:400 19px/1.05 "Bagel Fat One","Anton",sans-serif}
+.g30c small{font:12px "Instrument Serif",serif;opacity:.85}
+.g30plates h4{color:#f4efe3;font:400 22px "Bagel Fat One",sans-serif;margin:40px 0 10px}
+.g30pl{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px}
+.g30pl img{height:220px;border-radius:8px;box-shadow:0 0 0 4px #fbf8f1}
+.p30box{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.p30img{background:var(--c);border-radius:16px;overflow:hidden;min-height:320px}
+.p30img img{width:100%;height:100%;object-fit:cover;display:block}
+.p30img.noimg img{display:none}
+.p30txt h3{font:400 clamp(28px,3.4vw,44px)/1 "Bagel Fat One","Anton",sans-serif;margin:6px 0 2px}
+.p30txt small{font:700 11px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.06em;opacity:.7}
+.p30lat{font:italic 18px "Instrument Serif",serif;margin:0 0 10px}
+.p30txt p{line-height:1.55}
+.g30c2{font:10px "Space Mono",monospace;opacity:.6}
+.p30txt .rhn{color:#1a1a1a}
+@media (max-width:760px){.p30box{grid-template-columns:1fr}}
+
+/* the journal */
+.j30stats{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+.j30n{background:#fbf8f1;border:2px solid #1a1a1a;border-radius:16px;padding:12px 16px;min-width:120px;box-shadow:4px 4px 0 #1a1a1a}
+.j30n b{display:block;font:400 36px/1 "Bagel Fat One","Anton",sans-serif;color:#e3242b}
+.j30n.s b{font-size:24px;color:#1a1a1a}
+.j30n small{font:600 12px "Space Grotesk"}
+.j30act{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.j30list h4{font:400 20px "Bagel Fat One",sans-serif;margin:22px 0 8px;border-bottom:2px solid #1a1a1a;padding-bottom:4px}
+.j30i{padding:8px 0;border-bottom:1px dashed #1a1a1a44}
+.j30i b{font:700 15px "Space Grotesk"}
+.j30i p{margin:3px 0 0;font:14px/1.45 "Space Grotesk";opacity:.85}
+.j30k{display:inline-block;font:700 10px "Space Mono",monospace;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin-right:8px;background:#f6e43c;border:1px solid #1a1a1a}
+.j30k.k-plant{background:#58b368}.j30k.k-source{background:#3aa0e0;color:#fff}.j30k.k-aesthetic{background:#f08ab4}.j30k.k-pocket{background:#e6e1d3}
+@media print{body.print30>*:not(#learn30){display:none!important}body.print30 #learn30{position:static!important;display:block!important;background:#fff}body.print30 .j30act,body.print30 .bx,body.print30 #back30{display:none!important}}
+
+/* group chat: scanned, coloured cut-outs of everyone */
+.gc30wall{display:flex;gap:14px;align-items:flex-end;overflow-x:auto;padding:10px 6px 16px;margin-bottom:6px;background:#eceae4;border-radius:14px}
+.gc30t{position:relative;flex:none;width:78px;height:104px;background:var(--c);border-radius:46% 46% 10px 10px / 34% 34% 10px 10px;box-shadow:0 0 0 4px #fbf8f1,4px 6px 0 2px #0002;transform:rotate(var(--r));overflow:hidden;cursor:default}
+.gc30t img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.3);mix-blend-mode:multiply}
+.gc30t i{display:flex;align-items:center;justify-content:center;height:100%;font:400 34px "Bagel Fat One",sans-serif;font-style:normal;color:#1a1a1a}
+.gc30t b{position:absolute;left:0;right:0;bottom:0;background:#fbf8f1;font:700 10px "Space Grotesk";text-align:center;padding:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gc30t.me{cursor:pointer;outline:2px dashed #1a1a1a;outline-offset:-6px}
+.gcm .gcav{background:var(--c,#eee)!important}
+.gcm .gcav img{filter:grayscale(1) contrast(1.3);mix-blend-mode:multiply}

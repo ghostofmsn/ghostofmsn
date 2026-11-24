@@ -1,0 +1,12 @@
+/* ===== EXTENSION 32: a simpler music room ===== */
+.mr30 .o-djm,.mr30 .o-808,.mr30 .o-k7,.mr30 .o-boom,.mr30 .o-head,.mr30 .o-phone,.mr30 .o-reel,.mr30 .o-disc,.mr30doodle{display:none!important}
+.mr30star:nth-of-type(n+4){display:none}
+.mr30::before{opacity:.55}
+.mr30 .o-dig{left:6%;top:30%;width:24%}
+.mr30 .o-stereo{left:38%;top:24%;width:22%;aspect-ratio:1}
+.mr30 .o-tt{left:68%;top:22%;width:22%;aspect-ratio:1}
+.mr30 .o-cd{left:12%;top:68%;width:13%}
+.mr30 .o-nokia{left:45%;top:66%;width:8%}
+.mr30 .o-walk{left:70%;top:66%;width:13%}
+.mrsc.pon .mr30 .o-dig{left:4%;width:28%}.mrsc.pon .mr30 .o-stereo{left:38%;width:26%}.mrsc.pon .mr30 .o-tt{left:70%;width:26%}
+@media (max-width:760px){.mr30 .o-dig{left:4%;top:24%;width:42%}.mr30 .o-stereo{left:52%;top:22%;width:40%}.mr30 .o-tt{left:28%;top:48%;width:40%}.mr30 .o-cd{left:6%;top:76%;width:24%}.mr30 .o-nokia{left:42%;top:76%;width:14%}.mr30 .o-walk{left:66%;top:76%;width:26%}}

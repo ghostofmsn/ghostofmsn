@@ -1,0 +1,9 @@
+.bl38btn{background:#ff3d8e!important;color:#fff!important;border:2px solid #1a1a1a!important;box-shadow:3px 3px 0 #1a1a1a;font-weight:700}
+.bl38{background:#fbf8f1;border:3px solid #1a1a1a;border-radius:18px;padding:20px 22px;margin:10px 0 18px;box-shadow:6px 6px 0 #1a1a1a}
+.bl38 small{font:700 11px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.06em;opacity:.6}
+.bl38 h3{font:400 clamp(26px,3.6vw,44px)/1 "Bagel Fat One","Anton",sans-serif;margin:6px 0;color:#e3242b}
+.bl38t{margin:0 0 10px}
+.bl38g{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:4px 18px}
+.bl38 h4{font:400 18px "Bagel Fat One",sans-serif;margin:14px 0 6px}
+.bl38 ul{margin:0;padding-left:18px}
+.bl38do li{margin:6px 0;line-height:1.45}.bl38do b{display:block}

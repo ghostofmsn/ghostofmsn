@@ -1,0 +1,19 @@
+/* ===== EXTENSION 36: talk landing + black & white entrance tiles ===== */
+@keyframes th35{0%{background:#f4f1ea}25%{background:#111}50%{background:#bdbab3}75%{background:#2a2a2a}100%{background:#f4f1ea}}
+.th35tiles{background:#0a0a0a!important;opacity:1}
+.th35tiles i{box-shadow:inset 0 0 0 2px #ffffff18}
+.th35tiles i::after{background:#ffffff22}
+#threshold .thsky{background:#0a0a0a!important}
+#talk36{z-index:99500;background:#16131c;overflow:auto}
+.t36wrap{max-width:1180px;margin:0 auto;padding:26px 22px 80px;color:#f4ede0}
+#talk36 .l30head small{color:#f4ede0}
+.t36h{font:400 22px "Bagel Fat One","Anton",sans-serif;margin:30px 0 14px;color:#f6e43c}
+.t36grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:26px 20px}
+.t36r{border:0;background:none;padding:0;text-align:left;color:#f4ede0;cursor:pointer;transform:rotate(var(--r));transition:transform .2s}
+.t36r:hover{transform:rotate(0) translateY(-6px)}
+.t36door{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:.78;border-radius:999px 999px 10px 10px;background:radial-gradient(ellipse at 50% 30%,#ffffff40,#0000 60%),var(--c);box-shadow:0 0 0 5px #f4ede0,8px 10px 0 3px #0006;overflow:hidden}
+.t36door::before{content:"";position:absolute;left:14%;right:14%;top:12%;bottom:0;border-radius:999px 999px 0 0;background:#0005;box-shadow:inset 0 0 0 3px #ffffff30}
+.t36door i{position:relative;font-style:normal;font-size:52px;filter:drop-shadow(2px 3px 0 #0006)}
+.t36light{position:absolute;top:6%;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#7dff8a;box-shadow:0 0 12px #7dff8a}
+.t36r b{display:block;margin-top:12px;font:400 19px/1.1 "Bagel Fat One","Anton",sans-serif}
+.t36r small{font:13px "Space Grotesk";opacity:.75}

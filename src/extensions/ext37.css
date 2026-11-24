@@ -1,0 +1,49 @@
+/* ===== EXTENSION 37: letters from strangers, sparks, chat rail ===== */
+#strangers{z-index:99500;overflow:auto;background-color:#b9b6b0;background-image:radial-gradient(circle,#8f8b85 2.2px,#0000 2.6px);background-size:9px 9px}
+.ls37wrap{max-width:1240px;margin:0 auto;padding:26px 22px 90px;color:#1a1a1a}
+#strangers .l30head h2{color:#f4f2ee;-webkit-text-stroke:2px #1a1a1a;text-shadow:4px 4px 0 #1a1a1a}
+.ls37intro{font:15px/1.5 "Space Grotesk";max-width:620px;background:#f4f2eecc;padding:8px 12px;border-radius:8px}
+.ls37bar{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 26px}
+.ls37bar .big{background:#1f7f86!important;color:#fff!important;border:2px solid #1a1a1a!important;box-shadow:3px 3px 0 #1a1a1a;font-weight:700}
+.ls37wall{display:flex;flex-wrap:wrap;gap:34px 30px;align-items:center;justify-content:center;perspective:1200px}
+.env37{position:relative;width:calc(150px * var(--s));aspect-ratio:1.5;border:0;padding:0;cursor:pointer;background:var(--c);transform:rotateY(-14deg) rotate(var(--r));box-shadow:8px 10px 14px #0004,inset 0 0 0 1px #0002;transition:transform .25s}
+.env37:hover{transform:rotateY(0) translateY(-8px) scale(1.04)}
+.env37::before{content:"";position:absolute;left:0;right:0;top:-38%;height:62%;background:var(--c);clip-path:polygon(0 100%,50% 0,100% 100%);filter:brightness(1.08);z-index:0}
+.env37 .pp{position:absolute;left:12%;right:12%;top:-6%;height:60%;background:#fbfaf6;z-index:1;font:400 calc(15px * var(--s)) "Gochi Hand",cursive;color:#333;padding:8px 10px;text-align:left;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 80%,50% 100%,0 80%)}
+.env37 .fl,.env37 .fr{position:absolute;bottom:0;width:62%;height:78%;background:var(--c);z-index:2}
+.env37 .fl{left:0;clip-path:polygon(0 0,100% 100%,0 100%);filter:brightness(.92)}
+.env37 .fr{right:0;clip-path:polygon(100% 0,100% 100%,0 100%);filter:brightness(.86)}
+.env37 .pin{position:absolute;top:8%;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#888);z-index:3}
+.env37 .pin.l{left:6%}.env37 .pin.r{right:6%}
+.ls37paper{position:relative;width:min(560px,94vw);max-height:90vh;overflow:auto;background:#fbfaf6;background-image:repeating-linear-gradient(#0000 0 31px,#9ab6d655 31px 32px);border-radius:4px;padding:34px 30px 24px;box-shadow:10px 12px 0 #1a1a1a;color:#222}
+.ls37paper .bx{position:absolute;right:10px;top:8px}
+.ls37paper h3{font:400 28px "Gochi Hand",cursive;margin:0 0 8px}
+.ls37text{font:400 24px/32px "Gochi Hand",cursive;margin:0}
+.ls37sig{font:400 20px "Gochi Hand",cursive;text-align:right;margin-top:16px;opacity:.75}
+.ls37paper textarea{width:100%;font:400 21px/32px "Gochi Hand",cursive;background:transparent;border:0;outline:none;resize:vertical}
+.ls37paper input{width:100%;margin-top:8px}
+.ls37cols{display:flex;gap:10px;margin:12px 0}
+.ls37c{width:44px;height:30px;border:2px solid #1a1a1a;background:var(--c);cursor:pointer;clip-path:none}
+.ls37c.on{outline:3px solid #ff3d8e;outline-offset:2px}
+.ls37act{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ls37act .big{background:#1a1a1a!important;color:#fff!important}
+.ls37note{font:12px "Space Mono",monospace;opacity:.65}
+.ls37rep{opacity:.6;font-size:12px!important}
+.fs37{border:1.5px solid #1a1a1a;background:#f6e43c;border-radius:999px;font:700 11px "Space Grotesk";padding:1px 7px;cursor:pointer;vertical-align:middle;margin-left:4px}
+.fs37:hover{background:#ff3d8e;color:#fff}
+.sp37{margin-top:8px;background:#fff8d6;border:2px solid #1a1a1a;border-radius:10px;padding:8px 10px;box-shadow:3px 3px 0 #1a1a1a;cursor:default}
+.sp37 p{margin:4px 0;font-size:14px}.sp37 small{display:block;opacity:.7;margin-bottom:4px}
+#rail37t{position:fixed;right:0;top:42%;z-index:99400;writing-mode:vertical-rl;border:2px solid #1a1a1a;border-right:0;background:#7dff8a;color:#1a1a1a;font:700 14px "Space Grotesk";padding:14px 8px;border-radius:12px 0 0 12px;cursor:pointer;box-shadow:-3px 3px 0 #1a1a1a;display:flex;gap:6px;align-items:center}
+body.prelogin #rail37t{display:none}
+#rail37{position:fixed;right:0;top:64px;bottom:12px;width:min(310px,88vw);z-index:99450;background:#fbf8f1;border:2px solid #1a1a1a;border-right:0;border-radius:16px 0 0 16px;box-shadow:-6px 6px 0 #1a1a1a;padding:12px;overflow:auto;transform:translateX(110%);transition:transform .3s cubic-bezier(.2,.9,.3,1)}
+#rail37.open{transform:none}
+.r37h{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.r37h b{font:400 24px "Bagel Fat One","Anton",sans-serif}
+.r37s{font:700 11px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.06em;opacity:.6;margin:14px 0 4px}
+.r37i{position:relative;display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;text-align:left;padding:8px;border-radius:12px;cursor:pointer;color:#1a1a1a}
+.r37i:hover{background:#f6e43c}
+.r37i.ghost{background:#ffe3f1;border:2px solid #1a1a1a}
+.r37av{flex:none;width:42px;height:42px;border-radius:50%;background:#eee;display:flex;align-items:center;justify-content:center;font-size:20px;overflow:hidden;border:2px solid #1a1a1a}
+.r37av img{width:100%;height:100%;object-fit:cover}
+.r37i b{display:block;font:700 14px "Space Grotesk"}.r37i small{font:12px "Space Grotesk";opacity:.7}
+.r37dot{position:absolute;left:40px;top:38px;width:12px;height:12px;border-radius:50%;background:#2fd05a;border:2px solid #fff}

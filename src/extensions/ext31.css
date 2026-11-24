@@ -1,0 +1,9 @@
+/* ===== EXTENSION 31 ===== */
+#lform .big.ghost{width:auto!important;height:auto!important}
+#lform .gpop{display:block;width:min(210px,46vw);border-radius:6px;transform:rotate(-3deg);box-shadow:6px 8px 0 #0a0608;animation:gpop31 .7s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes gpop31{from{transform:rotate(-12deg) scale(.3) translateY(40px);opacity:0}to{transform:rotate(-3deg) scale(1);opacity:1}}
+#mroom .mrhead{background:none!important;box-shadow:none!important;border:0!important;pointer-events:none}
+#mroom .mrhead b,#mroom .mrhead span{display:none!important}
+#mroom .mrhead .bx{pointer-events:auto}
+.mr30doodle circle:nth-child(n+11){display:none}
+.mr30doodle{opacity:.55}

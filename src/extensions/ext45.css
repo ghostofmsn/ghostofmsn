@@ -1,0 +1,8 @@
+#mv45{position:fixed;right:16px;bottom:16px;z-index:99800;display:none;gap:8px}
+#mv45.show{display:flex}
+#mv45 button{border:2px solid #1a1a1a;background:#fbf8f1;color:#1a1a1a;font:700 13px "Space Grotesk";padding:8px 14px;border-radius:999px;box-shadow:3px 3px 0 #1a1a1a;cursor:pointer}
+#mv45r{display:none}
+body.mv45on #mv45r{display:block}
+body.mv45on #mv45b{background:#7dff8a}
+body.mv45on .t36r,body.mv45on .l30c,body.mv45on .g30c,body.mv45on .c42c,body.mv45on .env37,body.mv45on .gm33prev,body.mv45on .j30n{cursor:grab;outline:2px dashed #1a1a1a88;outline-offset:6px;touch-action:none}
+.mv45drag{cursor:grabbing!important;z-index:20!important;transition:none!important}

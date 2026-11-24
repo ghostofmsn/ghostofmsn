@@ -1,0 +1,65 @@
+
+/* ======== EXTENSION 4: type, dollz closet, niche lab ======== */
+#wallart .wt{font-family:"Instrument Serif",Georgia,serif!important;font-size:clamp(46px,10vw,150px)!important}
+.tb{font-family:"Space Grotesk",Tahoma,sans-serif;letter-spacing:.01em}
+.dk .l{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.02em}
+.hoodin h1,.pname{font-family:"Instrument Serif",Georgia,serif!important;font-style:italic;-webkit-text-stroke:0!important;background:none!important;color:#13286b!important;filter:none!important;letter-spacing:-.02em}
+#prof .pname{color:var(--acc)!important}
+/* dollz closet */
+.doll{background:#ffd1ec!important;background-image:radial-gradient(#fff 1.2px,#0000 1.6px),radial-gradient(#ff9ec9 1px,#0000 1.4px)!important;background-size:18px 18px,18px 18px!important;background-position:0 0,9px 9px!important;border:3px solid #ff4fa3}
+.doll .mirror{display:none}
+.doll svg{image-rendering:pixelated;width:200px!important;height:410px!important;filter:drop-shadow(3px 4px 0 #ff4fa355)}
+#fitName{font-family:"Pixelify Sans","VT323",monospace!important;color:#c8006b!important;font-size:18px!important}
+#closet .slot b{font-family:"Pixelify Sans","VT323",monospace;font-size:14px;color:#c8006b;font-weight:500}
+#closet .it{font-family:"Pixelify Sans","VT323",monospace;font-size:13px}
+#closet .body{background:linear-gradient(#fff0f8,#ffe1f1)}
+#closet .tb{background:linear-gradient(#ff8ac2,#e2366f 50%,#c8006b)!important}
+/* niche lab: an aesthetic research site inside the site */
+#niche{background:#f3f0e8;color:#111}
+.nl{max-width:1080px;margin:66px auto 60px;padding:0 18px;font-family:"Space Grotesk",sans-serif}
+.mono{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.06em}
+.muted2{color:#8a857a}
+.nlhead{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;border-bottom:1px solid #111;padding-bottom:18px;flex-wrap:wrap}
+.nlhead h1{font:400 clamp(44px,7vw,92px)/.92 "Instrument Serif",Georgia,serif;margin:10px 0 0;letter-spacing:-.02em}
+.nlhead h1 i{background:linear-gradient(transparent 62%,#d4ff3f 62%)}
+.nlme{border:1px solid #111;padding:10px 12px;line-height:1.6;min-width:220px;background:#fff}
+.nlsec{border-bottom:1px solid #111;padding:22px 0}
+.lab{margin-bottom:12px}
+.nlp{font-size:15px;line-height:1.5;max-width:640px}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:700px){.slots{grid-template-columns:1fr}}
+.reel2{background:#111;color:#d4ff3f;font:clamp(18px,2.4vw,26px)/1.2 "Pixelify Sans","VT323",monospace;padding:20px 14px;min-height:76px;display:flex;align-items:center;justify-content:center;text-align:center;border-radius:6px;cursor:pointer;box-shadow:inset 0 0 0 2px #333,inset 0 8px 18px #000}
+.reel2.spinning{color:#ff8ac2;filter:blur(.6px)}
+.reel2.lock{box-shadow:inset 0 0 0 3px #d4ff3f;position:relative}
+.reel2.lock::after{content:"locked";position:absolute;top:4px;right:8px;font:10px "Space Mono",monospace;color:#d4ff3f}
+.nbtn{font:600 13px "Space Grotesk",sans-serif;background:#111;color:#f3f0e8;border:1px solid #111;border-radius:999px;padding:8px 16px;cursor:pointer;text-decoration:none;display:inline-block}
+.nbtn:hover{background:#d4ff3f;color:#111}
+.nbtn.big{font-size:16px;padding:12px 24px}
+.nbtn.sm{font-size:12px;padding:5px 12px;background:#fff;color:#111}
+.nbtn.sm:hover{background:#d4ff3f}
+.nl .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.nl .xp{border-radius:999px;font-family:"Space Grotesk",sans-serif}
+.ncard{border:1px solid #111;background:#fff;padding:18px;margin-top:16px;box-shadow:6px 6px 0 #111;animation:pop .4s cubic-bezier(.3,1.5,.5,1)}
+.ncard h2,.fact h2{font:400 clamp(30px,4.6vw,54px)/1 "Instrument Serif",Georgia,serif;margin:6px 0 8px}
+.ncols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+@media(max-width:700px){.ncols{grid-template-columns:1fr}}
+.ncols a{display:block;color:#111;margin:4px 0;font-size:14px}
+.ncols a:hover{background:#d4ff3f}
+.lab2{margin-bottom:6px;color:#8a857a}
+.dos{white-space:pre-wrap;margin-top:12px;background:#f3f0e8;border:1px dashed #111;padding:12px;font:13px/1.5 "Space Mono",monospace}
+.hyb{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.nin{flex:1;min-width:180px;font:16px "Space Grotesk",sans-serif;padding:10px 14px;border:1px solid #111;border-radius:999px;background:#fff}
+.x2{font:32px "Instrument Serif",serif}
+.chips2{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.chip3{font:11px "Space Mono",monospace;text-transform:uppercase;letter-spacing:.08em;border:1px solid #111;border-radius:999px;background:none;padding:4px 10px;cursor:pointer}
+.chip3.on,.chip3:hover{background:#111;color:#d4ff3f}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.wcard{border:1px solid #111;background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px}
+.wcard h3{font:400 30px/1 "Instrument Serif",Georgia,serif;margin:2px 0}
+.wcard p{font-size:13px;line-height:1.45;margin:0;flex:1}
+.wlinks a{display:inline-block;font:11px "Space Mono",monospace;color:#111;border-bottom:1px solid #111;margin:2px 8px 2px 0;text-decoration:none}
+.wlinks a:hover{background:#d4ff3f}
+.fact{border:1px solid #111;background:#d4ff3f;padding:22px;box-shadow:6px 6px 0 #111}
+.fact p{font-size:16px;line-height:1.5;max-width:720px}
+.fact .q2{font:italic 24px/1.2 "Instrument Serif",Georgia,serif}
+.nlfoot{padding:20px 0;color:#8a857a}

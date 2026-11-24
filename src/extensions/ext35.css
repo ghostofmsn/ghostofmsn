@@ -1,0 +1,26 @@
+/* ===== EXTENSION 35: a tiled, colour-shifting entrance wall + a red & yellow door ===== */
+#threshold .thsky::after,#threshold .thgrass{display:none}
+#threshold .thsky{background:#2a0e08}
+.th35tiles{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--c),1fr);grid-auto-rows:calc(100vw / var(--c));gap:3px;padding:3px;background:#2a0e08;overflow:hidden;opacity:.95}
+.th35tiles i{position:relative;border-radius:6px;animation:th35 9s linear infinite;animation-delay:var(--d);box-shadow:inset 0 0 0 2px #ffffff22}
+.th35tiles i::after{content:"";position:absolute;inset:22%;border-radius:50%;background:#fff3;box-shadow:inset 0 -6px 10px #0003}
+.th35tiles i.t1{border-radius:50%}
+.th35tiles i.t2::after{inset:0 45%;border-radius:999px}
+.th35tiles i.t3{border-radius:50% 50% 6px 6px}
+@keyframes th35{0%{background:#d8321e}20%{background:#f2a516}40%{background:#f6d94a}60%{background:#e86a2a}80%{background:#b3201a}100%{background:#d8321e}}
+#threshold .thsky::before{content:"";position:absolute;inset:0;z-index:1}
+#threshold .thstage{z-index:3}
+#threshold .thalcove{background:radial-gradient(ellipse at 50% 30%,#ff6a4a,#d8321e 55%,#9a160e)!important;box-shadow:inset 0 30px 60px #ffffff44,inset 0 -20px 40px #0005,0 30px 80px #000a!important}
+#threshold .thhood{background:linear-gradient(#ffe680,#f2b300)!important;border-bottom-color:#fff3c2!important}
+#threshold .thleaf{background:linear-gradient(90deg,#c88a00,#ffd23f 22%,#f2b300 50%,#ffe066 74%,#c88a00)!important;box-shadow:inset 0 0 0 2px #9a5a00,-10px 0 30px #0006!important}
+#threshold .thwin{background:linear-gradient(135deg,#7a0e0a,#d8321e 60%,#5a0806)!important;box-shadow:inset 0 0 0 3px #fff3c2!important}
+#threshold .thplate{background:linear-gradient(90deg,#d8321e,#ff6a4a,#c41e14)!important;border-color:#7a0e0a66!important}
+#threshold .thframe{border-color:#fff3c2!important}
+#threshold .thport{background:radial-gradient(circle at 40% 35%,#fff6c8,#f6d94a 60%,#c88a00)!important}
+#threshold .thglow{background:radial-gradient(ellipse at 50% 0,#ffd23f55,transparent 60%)!important}
+#threshold .thl i{color:#ffd23f!important}
+
+/* ===== EXTENSION 35b: tiles in contrasting colours, so the red & yellow door stands out ===== */
+@keyframes th35{0%{background:#2fb8a8}20%{background:#f4ede0}40%{background:#ff8fc0}60%{background:#2f55d8}80%{background:#8fd8a0}100%{background:#2fb8a8}}
+.th35tiles{opacity:.9}
+.th35tiles::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,#0000 18%,#1a0a0866 55%,#1a0a08cc 100%),linear-gradient(#0000 60%,#1a0a08dd 82%);pointer-events:none}
